@@ -3,9 +3,13 @@ import {View,Text,StyleSheet,TouchableOpacity} from 'react-native';
 
 
 const listItem = (props) =>(
+    
     <TouchableOpacity  onPress = { props.onItemPressed}>    
-    <View style={styles.listItem } > 
-    <Text key={props.i}>s-{props.placeName}</Text>    
+    <View style={styles.listItem } >
+     
+    <Text key={props.i}>{props.placeName }  </Text>    
+
+
     </View>
     </TouchableOpacity>
     
