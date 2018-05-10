@@ -5,11 +5,13 @@ import ListItem from "../ListItem/ListItem";
 
 const placeList = props => {
   return (
-    <FlatList
+    <FlatList     
       style={styles.listContainer}
       data={props.places}
+      keyExtractor={(item, index) => String(index) }
+
       renderItem={(info) => (
-        <ListItem
+        <ListItem                   
           placeName={info.item.name}
           placeImage={info.item.image}
           onItemPressed={() => props.onItemSelected(info.item.key)}
@@ -21,7 +23,9 @@ const placeList = props => {
 
 const styles = StyleSheet.create({
   listContainer: {
-    width: "100%"
+    width: "100%",
+    
+
   }
 });
 

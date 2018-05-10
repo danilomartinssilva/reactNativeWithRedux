@@ -6,10 +6,11 @@ const listItem = (props) =>(
     
     
     <TouchableOpacity  onPress = { props.onItemPressed}>    
-    <View style={styles.listItem } >
+    <View style={styles.listItem } keyExtractor={item => item.index_id.toString()} >
+    
      <Image resizeMode="contain" source={props.placeImage}  style = {styles.placeImage}/>
     <Text key={props.i}>{props.placeName }  </Text>    
-    
+        
     </View>
     </TouchableOpacity>
     
@@ -19,9 +20,30 @@ const styles = StyleSheet.create({
         width:"100%",
         padding:10,
         backgroundColor:"#eee",
-        margin:5,
+        marginTop:5,        
         flexDirection:"row",
-        alignItems: "center"
+        alignItems: "center",
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#d6d7da',
+
+        
+                
+                
+                
+    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 
 
     },
